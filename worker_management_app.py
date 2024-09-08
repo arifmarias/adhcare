@@ -10,7 +10,8 @@ page_title = "AD HCare Worker Management"
 page_icon = "🙎‍♂️"  # emojis: https://www.webfx.com/tools/emoji-cheat-sheet/
 layout = "centered"
 # ------------------------------------
-
+st.set_page_config(page_title=page_title, page_icon=page_icon, layout=layout)
+st.title(page_title + " " + page_icon)
 # Initialize database
 conn = sqlite3.connect('worker_management.db', check_same_thread=False)
 c = conn.cursor()
@@ -89,8 +90,7 @@ def get_earliest_transaction_year():
 
 # Streamlit app
 def main():
-    st.set_page_config(page_title=page_title, page_icon=page_icon, layout=layout)
-    st.title(page_title + " " + page_icon)
+    
     
 
     menu = ["🏠 Home", "👨‍🦱 Add Worker Info", "⚙️ Update Worker Info", "Delete Worker", "👀 View Workers Info", "💵 Transactions", "📊 Report"]
