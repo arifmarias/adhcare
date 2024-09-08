@@ -14,7 +14,7 @@ st.set_page_config(page_title=page_title, page_icon=page_icon, layout=layout)
 st.title(page_title + " " + page_icon)
 # Initialize database
 conn = sqlite3.connect('worker_management.db', check_same_thread=False)
-c = conn.cursor()
+c = conn.cursor() 
 
 # Create tables if they don't exist
 c.execute('''CREATE TABLE IF NOT EXISTS workers
